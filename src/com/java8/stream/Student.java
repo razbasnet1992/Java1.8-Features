@@ -1,5 +1,9 @@
 package com.java8.stream;
 
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 public class Student {
 	private int age;
 	private String firstName;
