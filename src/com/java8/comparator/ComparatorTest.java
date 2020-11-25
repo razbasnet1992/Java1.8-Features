@@ -37,11 +37,7 @@ class Movie implements Comparable<Movie> {
 }
 class Rating implements Comparator<Movie>{
 	public int compare(Movie m1,Movie m2) {
-		if(m1.getRating()<m2.getRating())
-			return 1;
-		if(m1.getRating()>m2.getRating())
-			return -1;
-		else return 0;
+		return new  Double(m1.getRating()).compareTo(m2.getRating());
 	}
 }
 class Name implements Comparator<Movie>{
@@ -54,9 +50,9 @@ class Name implements Comparator<Movie>{
 public class ComparatorTest {
 	public static void main(String...args) {
 		ArrayList<Movie> list = new ArrayList<Movie>(); 
-        list.add(new Movie("Force Awakens", 8.8, 2015)); 
-        list.add(new Movie("Star Wars", 8.7, 1977)); 
-        list.add(new Movie("Empire Strikes Back", 8.8, 1980)); 
+        list.add(new Movie("Force Awakens", 8, 2015)); 
+        list.add(new Movie("Star Wars", 7, 1977)); 
+        list.add(new Movie("Empire Strikes Back", 9, 1980)); 
         
         Rating r = new Rating();
         Collections.sort(list,r);

@@ -18,7 +18,7 @@ public class MostWords {
 			String currentLine = reader.readLine();
 
 			while (currentLine != null) {
-				String[] words = currentLine.toLowerCase().split(" ");
+				String[] words = currentLine.toLowerCase().split(" \\s.-");
 
 				for (String word : words) {
 
